@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => Datamodel(),
-        )
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
               ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 40, 39, 41)),
           useMaterial3: true,
         ),
-        home: const Screen(),
+        home: Screen(),
         routes: {
           '/Screen': (context) => Screen(),
           '/calculator': (context) => const Calculator(),
@@ -40,7 +40,10 @@ class MyApp extends StatelessWidget {
 }
 
 class Screen extends StatelessWidget {
-  const Screen({super.key});
+  Screen({super.key});
+  bool istrue = false;
+  int val = 1;
+  int selectedVal = 1;
 
   @override
   Widget build(BuildContext context) {
